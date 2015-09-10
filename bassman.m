@@ -8,8 +8,7 @@ Fs = 44100;
 samples = [1,1*Fs];
 
 
-% [y, Fs] = audioread('C:\Users\Dad\Documents\MATLAB\tube1\sound\a#2u.wav',samples);
-[y, Fs] = audioread('C:\Users\japtain cack\Desktop\tube1\sound\a#2u.wav',samples);
+[y, Fs] = audioread('sound\a#2u.wav',samples);
 y = y(:,1)';
 N = length(y);
 
@@ -56,8 +55,6 @@ x(1) = 1.0;
 H = (a*eye(1)-A)^-1;
 K = D*H*C+F;
 temp = zeros(4,N);
-
-
 
 for n = 2:N
     p = D*H*( (a*eye(1) + A)*x(:,n-1) + B*( u(:,n) + u(:,n-1) ) + C*temp(:,n-1) )  + E*u(:,n);
