@@ -1,0 +1,9 @@
+function [ output ] = g( W, X, U )
+%G Summary of this function goes here
+%   Detailed explanation goes here
+
+
+
+
+end
+
